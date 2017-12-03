@@ -94,8 +94,6 @@ window.onload = () =>{
 	class DisplayCanvas{
 		constructor(w, h){
 			this.canvas = document.createElement("canvas");
-			this.canvas.className = 'subCanvas';
-			//document.body.appendChild(this.canvas);
 			this.canvas.width = w;
 			this.canvas.height = h;
 			this.ctx = this.canvas.getContext('2d');
@@ -155,10 +153,6 @@ window.onload = () =>{
 			}
 			
 			this.offTextureCanvas = document.createElement('canvas');
-
-			this.offTextureCanvas.className = 'subCanvas';
-			document.body.appendChild(this.offTextureCanvas);
-
 			this.offTextureCanvas.width =  w + this.margin * 2;
 			this.offTextureCanvas.height = this.th + this.margin * 2;
 			let offTextureCtx = this.offTextureCanvas.getContext('2d');
@@ -234,39 +228,12 @@ window.onload = () =>{
 		}
 
 	}
-	//DOTO:お前らもきれいに書かれてろ
+	//TODO:次はここ
 	class WhiteDataDisplay{
 		constructor(w, h){
-			// this.finished = false;
-			// this.startPosX = w * 11 / 32;
-			// this.startPosY = h * 11 / 32;
-			// this.w = w * 5 / 16;
-			// this.h = h * 5 / 16;
 		}
 
 		update(ctx){
-			// this.ctx.strokeStyle = 'rgba(255,255,255,0.4)';
-			// this.ctx.lineWidth = 2;
-			// this.ctx.strokeRect(this.startPosX, this.startPosY, this.w, this.h);
-			
-
-			// this.ctx.strokeStyle = 'rgba(255,255,255,0.75)';
-			// this.ctx.strokeRect(this.startPosX + this.w  * 0.8, this.startPosY + this.h * 0.075, this.w * 0.15, this.h * 0.3);
-
-			// this.ctx.strokeRect(this.startPosX + this.w  * 0.05, this.startPosY + this.h * 0.1, this.w * 0.325, this.h * 0.1);
-			// this.ctx.strokeRect(this.startPosX + this.w  * 0.425, this.startPosY + this.h * 0.1, this.w * 0.325, this.h * 0.1);
-
-			// this.ctx.strokeRect(this.startPosX + this.w  * 0.05, this.startPosY + this.h * 0.3, this.w * 0.325, this.h * 0.3);
-			// this.ctx.strokeRect(this.startPosX + this.w  * 0.425, this.startPosY + this.h * 0.3, this.w * 0.325, this.h * 0.3);
-			
-			// this.ctx.strokeRect(this.startPosX + this.w  * 0.05, this.startPosY + this.h * 0.7, this.w * 0.325, this.h * 0.2);
-			// this.ctx.strokeRect(this.startPosX + this.w  * 0.425, this.startPosY + this.h * 0.7, this.w * 0.325, this.h * 0.2);
-			// this.ctx.strokeRect(this.startPosX + this.w  * 0.05, this.startPosY + this.h * 0.283333, this.w * 0.45, this.h * 0.233333);
-			// this.ctx.strokeRect(this.startPosX + this.w  * 0.05, this.startPosY + this.h * 0.616666, this.w * 0.45, this.h * 0.333333);
-
-			// this.ctx.strokeRect(this.startPosX + this.w  * 0.55, this.startPosY + this.h * 0.05, this.w * 0.4, this.h * 0.133333);
-			// this.ctx.strokeRect(this.startPosX + this.w  * 0.55, this.startPosY + this.h * 0.283333, this.w * 0.4, this.h * 0.233333);
-			// this.ctx.strokeRect(this.startPosX + this.w  * 0.55, this.startPosY + this.h * 0.616666, this.w * 0.4, this.h * 0.333333);
 		}
 
 	}
@@ -287,7 +254,6 @@ window.onload = () =>{
 	class PointTexture{
 		constructor(w){
 			this.canvas = document.createElement("canvas");
-			this.canvas.id = 'subCanvas';
 			this.canvas.width = w;
 			this.canvas.height = w;
 			let ctx = this.canvas.getContext('2d');
