@@ -94,8 +94,6 @@ window.onload = () =>{
 	class DisplayCanvas{
 		constructor(w, h){
 			this.canvas = document.createElement("canvas");
-			this.canvas.className = 'subCanvas';
-			//document.body.appendChild(this.canvas);
 			this.canvas.width = w;
 			this.canvas.height = h;
 			this.ctx = this.canvas.getContext('2d');
@@ -147,10 +145,6 @@ window.onload = () =>{
 			}
 			
 			this.offTextureCanvas = document.createElement('canvas');
-
-			this.offTextureCanvas.className = 'subCanvas';
-			document.body.appendChild(this.offTextureCanvas);
-
 			this.offTextureCanvas.width =  w + this.margin * 2;
 			this.offTextureCanvas.height = this.th + this.margin * 2;
 			let offTextureCtx = this.offTextureCanvas.getContext('2d');
@@ -190,59 +184,6 @@ window.onload = () =>{
 					this.th
 				);
 			}
-			//TODO:テクスチャ貼る感じにして圧倒的効率化&コード読みやすく化(日本語が不自由)
-			// let spanY = this.h / 5;
-			// let spanX = this.w / 4;
-			// this.ctx.fillStyle = 'rgba(255,0,0,1)';
-			// this.ctx.strokeStyle = 'rgba(255,0,0,1)';
-			// this.ctx.lineWidth = 3;
-			// for(let y = spanY;y < this.h;y += spanY){
-			// 	this.ctx.fillRect(0, y - this.h * 0.0125, this.w, this.h * 0.0125 * 2);
-			// 	for(let x = 0;x - this.w * 0.006 * 5 < this.w;x += this.w * 0.006){
-			// 		this.ctx.beginPath();
-			// 		this.ctx.moveTo(x, y - this.h * 0.0125 * 1.25);
-			// 		this.ctx.lineTo(x - this.w * 0.01, y);
-			// 		this.ctx.lineTo(x, y + this.h * 0.0125 * 1.25);
-			// 		this.ctx.stroke();
-			// 	}
-			// }
-			// if(this.islighting){
-			// 	this.ctx.globalCompositeOperation = 'xor';
-			// 	this.ctx.font = "30px 'ヒラギノ角ゴ Std W8'";
-			// 	this.ctx.textAlign = 'center';
-			// 	for(let y = spanY;y < this.h;y += spanY){
-			// 		for(let x = 0;x <= this.w;x += spanX){
-			// 			this.ctx.fillRect(x + spanX / 2, y - this.h * 0.0125 * 0.75, this.w / 800, this.h * 0.0125 * 1.5);
-			// 			this.ctx.fillText("ALERT", x, y + 12, 100);
-			// 		}
-			// 	}
-
-			// 	this.ctx.globalCompositeOperation = 'source-over';
-			// }else{
-			// 	this.ctx.fillStyle = 'rgba(0,0,0,0.5)';
-			// 	this.ctx.lineWidth = 2;
-			// 	for(let y = spanY;y < this.h;y += spanY){
-			// 		this.ctx.clearRect(0, y - this.h * 0.0125 * 0.9, this.w, this.h * 0.0125 * 1.8);
-			// 		this.ctx.fillRect(0, y - this.h * 0.0125 * 0.9, this.w, this.h * 0.0125 * 1.8);
-			// 		this.ctx.beginPath();
-			// 		this.ctx.moveTo(0, y - this.h * 0.0125 * 0.75);
-			// 		this.ctx.lineTo(this.w, y - this.h * 0.0125 * 0.75);
-			// 		this.ctx.moveTo(0, y + this.h * 0.0125 * 0.75);
-			// 		this.ctx.lineTo(this.w, y + this.h * 0.0125 * 0.75);
-			// 		for(let x = 0;x <= this.w;x += spanX){
-			// 			this.ctx.moveTo(x + spanX / 32, y - this.h * 0.0125 * 0.75);
-			// 			this.ctx.lineTo(x - spanX / 32, y + this.h * 0.0125 * 0.75);
-			// 		}
-			// 		this.ctx.stroke();
-			// 	}
-			// 	this.ctx.lineWidth = 5;
-			// 	for(let y = spanY;y < this.h;y += spanY){
-			// 		this.ctx.beginPath();
-			// 		this.ctx.moveTo(0, y + this.h * 0.0125 * 0.25);
-			// 		this.ctx.lineTo(this.w, y + this.h * 0.0125 * 0.25);
-			// 		this.ctx.stroke();
-			// 	}
-			// }
 		}
 	}
 	class DataDisplay{
@@ -260,36 +201,9 @@ window.onload = () =>{
 	//DOTO:お前らもきれいに書かれてろ
 	class WhiteDataDisplay{
 		constructor(w, h){
-			// this.finished = false;
-			// this.startPosX = w * 11 / 32;
-			// this.startPosY = h * 11 / 32;
-			// this.w = w * 5 / 16;
-			// this.h = h * 5 / 16;
 		}
 
 		update(ctx){
-			// this.ctx.strokeStyle = 'rgba(255,255,255,0.4)';
-			// this.ctx.lineWidth = 2;
-			// this.ctx.strokeRect(this.startPosX, this.startPosY, this.w, this.h);
-			
-
-			// this.ctx.strokeStyle = 'rgba(255,255,255,0.75)';
-			// this.ctx.strokeRect(this.startPosX + this.w  * 0.8, this.startPosY + this.h * 0.075, this.w * 0.15, this.h * 0.3);
-
-			// this.ctx.strokeRect(this.startPosX + this.w  * 0.05, this.startPosY + this.h * 0.1, this.w * 0.325, this.h * 0.1);
-			// this.ctx.strokeRect(this.startPosX + this.w  * 0.425, this.startPosY + this.h * 0.1, this.w * 0.325, this.h * 0.1);
-
-			// this.ctx.strokeRect(this.startPosX + this.w  * 0.05, this.startPosY + this.h * 0.3, this.w * 0.325, this.h * 0.3);
-			// this.ctx.strokeRect(this.startPosX + this.w  * 0.425, this.startPosY + this.h * 0.3, this.w * 0.325, this.h * 0.3);
-			
-			// this.ctx.strokeRect(this.startPosX + this.w  * 0.05, this.startPosY + this.h * 0.7, this.w * 0.325, this.h * 0.2);
-			// this.ctx.strokeRect(this.startPosX + this.w  * 0.425, this.startPosY + this.h * 0.7, this.w * 0.325, this.h * 0.2);
-			// this.ctx.strokeRect(this.startPosX + this.w  * 0.05, this.startPosY + this.h * 0.283333, this.w * 0.45, this.h * 0.233333);
-			// this.ctx.strokeRect(this.startPosX + this.w  * 0.05, this.startPosY + this.h * 0.616666, this.w * 0.45, this.h * 0.333333);
-
-			// this.ctx.strokeRect(this.startPosX + this.w  * 0.55, this.startPosY + this.h * 0.05, this.w * 0.4, this.h * 0.133333);
-			// this.ctx.strokeRect(this.startPosX + this.w  * 0.55, this.startPosY + this.h * 0.283333, this.w * 0.4, this.h * 0.233333);
-			// this.ctx.strokeRect(this.startPosX + this.w  * 0.55, this.startPosY + this.h * 0.616666, this.w * 0.4, this.h * 0.333333);
 		}
 
 	}
@@ -310,7 +224,6 @@ window.onload = () =>{
 	class PointTexture{
 		constructor(w){
 			this.canvas = document.createElement("canvas");
-			this.canvas.id = 'subCanvas';
 			this.canvas.width = w;
 			this.canvas.height = w;
 			let ctx = this.canvas.getContext('2d');
