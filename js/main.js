@@ -122,10 +122,13 @@ window.onload = () =>{
 			this.hd = horizontalDivision;
 			this.margin = 10;
 			this.onTextureCanvas = document.createElement('canvas');
+
 			this.onTextureCanvas.width = w + this.margin * 2;
 			this.onTextureCanvas.height = this.th + this.margin * 2;
 			let onTextureCtx = this.onTextureCanvas.getContext('2d');
 
+			onTextureCtx.fillStyle = 'rgba(0,0,0,0.5)';
+			onTextureCtx.fillRect(this.margin, this.margin, w, this.th);
 			onTextureCtx.strokeStyle = 'red';
 			onTextureCtx.lineWidth = 3;
 			onTextureCtx.fillStyle = 'red';
@@ -145,6 +148,11 @@ window.onload = () =>{
 			for(let i = 0;i < verticalDivision;i++){
 				onTextureCtx.fillText('ALERT', (i + 0.5) * w / verticalDivision + this.margin, this.th / 2 + this.margin);
 			}
+			onTextureCtx.globalCompositeOperation = 'source-over';
+			onTextureCtx.fillStyle = 'rgba(0,0,0,0.5)';
+			for(let i = 0;i < verticalDivision;i++){
+				onTextureCtx.fillText('ALERT', (i + 0.5) * w / verticalDivision + this.margin, this.th / 2 + this.margin);
+			}
 			
 			this.offTextureCanvas = document.createElement('canvas');
 
@@ -155,6 +163,8 @@ window.onload = () =>{
 			this.offTextureCanvas.height = this.th + this.margin * 2;
 			let offTextureCtx = this.offTextureCanvas.getContext('2d');
 
+			offTextureCtx.fillStyle = 'rgba(0,0,0,0.5)';
+			offTextureCtx.fillRect(this.margin, this.margin, w, this.th);
 			offTextureCtx.strokeStyle = 'red';
 			offTextureCtx.lineWidth = 3;
 			offTextureCtx.fillStyle = 'red';
