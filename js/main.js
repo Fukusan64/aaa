@@ -220,59 +220,6 @@ window.onload = () =>{
 					this.th
 				);
 			}
-			//TODO:テクスチャ貼る感じにして圧倒的効率化&コード読みやすく化(日本語が不自由)
-			// let spanY = this.h / 5;
-			// let spanX = this.w / 4;
-			// this.ctx.fillStyle = 'rgba(255,0,0,1)';
-			// this.ctx.strokeStyle = 'rgba(255,0,0,1)';
-			// this.ctx.lineWidth = 3;
-			// for(let y = spanY;y < this.h;y += spanY){
-			// 	this.ctx.fillRect(0, y - this.h * 0.0125, this.w, this.h * 0.0125 * 2);
-			// 	for(let x = 0;x - this.w * 0.006 * 5 < this.w;x += this.w * 0.006){
-			// 		this.ctx.beginPath();
-			// 		this.ctx.moveTo(x, y - this.h * 0.0125 * 1.25);
-			// 		this.ctx.lineTo(x - this.w * 0.01, y);
-			// 		this.ctx.lineTo(x, y + this.h * 0.0125 * 1.25);
-			// 		this.ctx.stroke();
-			// 	}
-			// }
-			// if(this.islighting){
-			// 	this.ctx.globalCompositeOperation = 'xor';
-			// 	this.ctx.font = "30px 'ヒラギノ角ゴ Std W8'";
-			// 	this.ctx.textAlign = 'center';
-			// 	for(let y = spanY;y < this.h;y += spanY){
-			// 		for(let x = 0;x <= this.w;x += spanX){
-			// 			this.ctx.fillRect(x + spanX / 2, y - this.h * 0.0125 * 0.75, this.w / 800, this.h * 0.0125 * 1.5);
-			// 			this.ctx.fillText("ALERT", x, y + 12, 100);
-			// 		}
-			// 	}
-
-			// 	this.ctx.globalCompositeOperation = 'source-over';
-			// }else{
-			// 	this.ctx.fillStyle = 'rgba(0,0,0,0.5)';
-			// 	this.ctx.lineWidth = 2;
-			// 	for(let y = spanY;y < this.h;y += spanY){
-			// 		this.ctx.clearRect(0, y - this.h * 0.0125 * 0.9, this.w, this.h * 0.0125 * 1.8);
-			// 		this.ctx.fillRect(0, y - this.h * 0.0125 * 0.9, this.w, this.h * 0.0125 * 1.8);
-			// 		this.ctx.beginPath();
-			// 		this.ctx.moveTo(0, y - this.h * 0.0125 * 0.75);
-			// 		this.ctx.lineTo(this.w, y - this.h * 0.0125 * 0.75);
-			// 		this.ctx.moveTo(0, y + this.h * 0.0125 * 0.75);
-			// 		this.ctx.lineTo(this.w, y + this.h * 0.0125 * 0.75);
-			// 		for(let x = 0;x <= this.w;x += spanX){
-			// 			this.ctx.moveTo(x + spanX / 32, y - this.h * 0.0125 * 0.75);
-			// 			this.ctx.lineTo(x - spanX / 32, y + this.h * 0.0125 * 0.75);
-			// 		}
-			// 		this.ctx.stroke();
-			// 	}
-			// 	this.ctx.lineWidth = 5;
-			// 	for(let y = spanY;y < this.h;y += spanY){
-			// 		this.ctx.beginPath();
-			// 		this.ctx.moveTo(0, y + this.h * 0.0125 * 0.25);
-			// 		this.ctx.lineTo(this.w, y + this.h * 0.0125 * 0.25);
-			// 		this.ctx.stroke();
-			// 	}
-			// }
 		}
 	}
 	class DataDisplay{
