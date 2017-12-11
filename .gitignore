@@ -56,3 +56,6 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# bundleされた分はいつでも作れるから除外
+public/bundle.js
