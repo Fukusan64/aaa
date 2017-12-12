@@ -1,0 +1,32 @@
+{
+  "name": "aaa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-dev-server": "./node_modules/.bin/webpack-dev-server --inline --hot",
+    "webpack": "./node_modules/.bin/webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fukusan64/aaa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fukusan64/aaa/issues"
+  },
+  "homepage": "https://github.com/Fukusan64/aaa#readme",
+  "devDependencies": {
+    "uglifyjs-webpack-plugin": "^1.1.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
+  },
+  "dependencies": {
+    "stats-js": "^1.0.0-alpha1",
+    "three": "^0.88.0",
+    "three-orbitcontrols": "^2.0.0"
+  }
+}
