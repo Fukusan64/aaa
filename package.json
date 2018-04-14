@@ -20,11 +20,12 @@
   },
   "homepage": "https://github.com/Fukusan64/aaa#readme",
   "devDependencies": {
-    "uglifyjs-webpack-plugin": "^1.1.2",
-    "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.9.7"
+    "uglifyjs-webpack-plugin": "^1.2.4",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.2"
   },
   "dependencies": {
+    "save": "^2.3.2",
     "stats-js": "^1.0.0-alpha1",
     "three": "^0.88.0",
     "three-orbitcontrols": "^2.0.0"
